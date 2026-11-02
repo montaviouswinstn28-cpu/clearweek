@@ -5,19 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clearweek — Your numbers, cleaned up and explained</title>
 <style>
-  :root { --bg:#fafaf7; --fg:#1d2327; --muted:#5b666e; --accent:#1f6f54; --card:#fff; --line:#e3e3dc; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14181a; --fg:#eceee9; --muted:#9aa5ab; --accent:#4fbf95; --card:#1c2225; --line:#2c3438; } }
+  /* black / red / white theme, matching business/app/index.html (same palette in light and dark mode) */
+  :root { --bg:#0b0b0d; --fg:#121214; --muted:#4a4a53; --accent:#d90429; --card:#fff; --line:#d9d9de; --onbg:#fff; --onbg-mute:#c7c7cf; }
   * { box-sizing:border-box; }
-  body { margin:0; font:17px/1.55 system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+  body { margin:0; min-height:100vh; font:17px/1.55 system-ui,sans-serif; background-color:var(--bg); color:var(--fg);
+    background-image:linear-gradient(90deg,#d90429 0,#d90429 100%),radial-gradient(ellipse 70% 45% at 0 0,rgba(217,4,41,.38),transparent 70%),repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0,rgba(255,255,255,.035) 1px,transparent 1px,transparent 14px);
+    background-size:100% 6px,100% 100%,auto; background-position:0 0,0 0,0 0; background-repeat:no-repeat,no-repeat,repeat; }
   main { max-width:760px; margin:0 auto; padding:48px 16px; }
   h1 { font-size:2.2rem; line-height:1.15; margin:0 0 12px; }
   h2 { margin-top:48px; }
-  p.lead { color:var(--muted); font-size:1.15rem; }
+  main > h1, main > h2, main > p { color:var(--onbg); }
+  p.lead { color:var(--onbg-mute); font-size:1.15rem; }
   .btn { display:inline-block; background:var(--accent); color:#fff; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:600; }
+  .btn:hover { background:#b3122a; }
   .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; color:var(--fg); box-shadow:0 2px 0 rgba(217,4,41,.9),0 8px 22px rgba(0,0,0,.45); }
   .price { font-size:1.8rem; font-weight:700; }
-  footer { margin-top:56px; color:var(--muted); font-size:.9rem; }
+  footer { margin-top:56px; color:var(--onbg-mute); font-size:.9rem; }
 </style>
 </head>
 <body>
