@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://montaviouswinstn28-cpu.github.io/clearweek/sitemap.xml
